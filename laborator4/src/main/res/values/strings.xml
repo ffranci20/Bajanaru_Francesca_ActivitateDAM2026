@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Laborator4</string>
+    <string name="nicio_floare_nu_a_fost_adaugata">Nicio floare nu a fost adaugata</string>
+    <string name="adauga_o_floare">Adauga o floare</string>
+    <string name="adauga_o_floare_noua">Adauga o floare noua</string>
+    <string name="denumire_floare">Denumire floare</string>
+    <string name="floarea_are_spini">Floarea are spini</string>
+    <string name="mediu_de_crestere">Mediu de crestere</string>
+    <string name="gradina">Gradina</string>
+    <string name="ghiveci">Ghiveci</string>
+    <string name="culoare_dominanta">Culoare dominanta</string>
+    <string name="rating_aspect_parfum">Rating aspect/parfum</string>
+    <string name="este_o_planta_perena">Este o planta perena</string>
+    <string name="adauga_floare">Adauga floare</string>
+</resources>
