@@ -12,4 +12,9 @@
     <string name="rating_aspect_parfum">Rating aspect/parfum</string>
     <string name="este_o_planta_perena">Este o planta perena</string>
     <string name="adauga_floare">Adauga floare</string>
+    <string name="vezi_lista_flori">Vezi Lista Flori</string>
+    <string name="vizualizeaza_flori">Vizualizeaza flori</string>
+    <string name="vezi_floare">Vezi floare</string>
+    <string name="lista_flori">Lista flori</string>
+    <string name="lista_de_flori">Lista de flori</string>
 </resources>

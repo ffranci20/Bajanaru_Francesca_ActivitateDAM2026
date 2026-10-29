@@ -23,4 +23,13 @@
         android:paddingHorizontal="32dp"
         android:paddingVertical="12dp"
         android:text="@string/adauga_o_floare" />
+
+    <Button
+        android:id="@+id/btnVeziLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/vezi_lista_flori" />
+
 </LinearLayout>
