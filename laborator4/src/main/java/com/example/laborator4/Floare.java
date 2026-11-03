@@ -5,6 +5,8 @@ import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
+//in loc sa trimit fiecare atribut printr un intent, transmit un obiect intreg de tip floare
+//de aceea clasa trebuie sa implementeze Parcelable
 public class Floare implements Parcelable {
     private String denumire;
     private boolean areSpini;
@@ -66,7 +68,7 @@ public class Floare implements Parcelable {
         this.rating = rating;
     }
 
-    public boolean isEstePerena() {
+    public boolean getEstePerena() {
         return estePerena;
     }
 
@@ -74,6 +76,7 @@ public class Floare implements Parcelable {
         this.estePerena = estePerena;
     }
 
+    //constructorul privat care citeste datele din pachet in aceeasi ordine
     protected Floare(Parcel in) {
         denumire = in.readString();
         areSpini = in.readByte() != 0; // boolean se citeste ca byte
@@ -83,6 +86,7 @@ public class Floare implements Parcelable {
         estePerena = in.readByte() != 0;
     }
 
+    //creator - ii spune sistemului cum sa creeze instante noi de floare din pachetul primit
     public static final Creator<Floare> CREATOR = new Creator<Floare>() {
         @Override
         public Floare createFromParcel(Parcel in) {
@@ -100,7 +104,7 @@ public class Floare implements Parcelable {
         return 0;
     }
 
-    //aici se scriu atributele in pachet
+    //aici se scriu atributele in pachet, impacheteaza atributele obiectului intrun flux de date
     @Override
     public void writeToParcel(@NonNull Parcel dest, int flags) {
         dest.writeString(denumire);

@@ -55,6 +55,27 @@ public class AdaugareActivitate extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, culori);
         sp.setAdapter(adapter);
 
+        Intent it = getIntent();
+        if(it.hasExtra("floare")){
+            Floare floare = it.getParcelableExtra("floare");
+            EditText et = findViewById(R.id.etDenumire);
+            CheckBox cb = findViewById(R.id.cbSpini);
+            RadioGroup rg = findViewById(R.id.rgMediu);
+            Spinner sp = findViewById(R.id.spinnerCuloare);
+            RatingBar rb = findViewById(R.id.ratingBar);
+            Switch sw = findViewById(R.id.swPerena);
+
+            et.setText(floare.getDenumire());
+            cb.setChecked(floare.getAreSpini());
+            if(floare.getTipMediu().equals("Gradina")){
+                rg.check(R.id.rbGradina);
+            }else{
+                rg.check(R.id.rbGhiveci);
+            }
+            sp.setSelection(adapter.getPosition(floare.getCuloare()));
+            rb.setRating(floare.getRating());
+            sw.setChecked(floare.getEstePerena());
+        }
 
         btn.setOnClickListener(v -> {
 
@@ -82,6 +103,7 @@ public class AdaugareActivitate extends AppCompatActivity {
             finish();
         });
     }
+
 }
 
 

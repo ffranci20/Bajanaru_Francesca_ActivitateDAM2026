@@ -16,6 +16,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         tvRezultat = findViewById(R.id.tvRezultat);
         btnDeschide = findViewById(R.id.btnDeschideAdaugare);
 
+        //obiectul salvat este salvat intr o lista si afisat pe ecran
         ActivityResultLauncher<Intent> launcher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
@@ -68,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, AdaugareActivitate.class);
             launcher.launch(intent);
         });
+
+
+
     }
 }
 
