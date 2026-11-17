@@ -17,4 +17,7 @@
     <string name="vezi_floare">Vezi floare</string>
     <string name="lista_flori">Lista flori</string>
     <string name="lista_de_flori">Lista de flori</string>
+    <string name="deschide_pozele">Deschide pozele</string>
+    <string name="imaginile_florilor">Imaginile florilor:</string>
+    <string name="imaginea_florii">Imaginea florii:</string>
 </resources>

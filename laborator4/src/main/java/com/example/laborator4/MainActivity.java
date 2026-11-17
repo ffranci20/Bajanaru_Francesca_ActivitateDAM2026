@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,8 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView tvRezultat;
     private Button btnDeschide;
+    private Button btnDeschidePoza;
 
     private ArrayList<Floare> listaFlori = new ArrayList<>();
+
+    private ArrayList<Poze> listaPoze = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,8 +75,13 @@ public class MainActivity extends AppCompatActivity {
             launcher.launch(intent);
         });
 
-
-
+        btnDeschide = findViewById(R.id.btnDeschidePoza);
+        btnDeschide.setOnClickListener(v->{
+            Intent intent = new Intent(MainActivity.this, LVPozeActivitate.class);
+            startActivity(intent);
+        });
     }
+
+
 }
 

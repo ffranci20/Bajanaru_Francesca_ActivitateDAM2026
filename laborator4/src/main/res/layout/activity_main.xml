@@ -32,4 +32,10 @@
         android:layout_marginTop="16dp"
         android:text="@string/vezi_lista_flori" />
 
+    <Button
+        android:id="@+id/btnDeschidePoza"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:text="@string/deschide_pozele" />
+
 </LinearLayout>
